@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien\ScreenShots">
+      <UniqueIdentifier>{e0e52904-0754-4676-b23c-e8c661ffe301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\VdeoCapturer">
+      <UniqueIdentifier>{c5a63806-45ec-45f6-b4bd-9ccb4c677c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Settings">
+      <UniqueIdentifier>{413935d3-edaf-4ce4-adbf-42844cc71087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Utils">
+      <UniqueIdentifier>{27ca17a4-9f53-43ec-bb9a-44e471c0973f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Main">
+      <UniqueIdentifier>{7e77caa3-314b-431b-b41b-df15063f3dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Logger">
+      <UniqueIdentifier>{188672b4-41c5-4a5c-937e-0e353dbf4df8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Ressourcendateien</Filter>
+    </ClCompile>
+    <ClCompile Include="takeFocusedScreenshot.cpp">
+      <Filter>Ressourcendateien\ScreenShots</Filter>
+    </ClCompile>
+    <ClCompile Include="takeDesktopScreenshot.cpp">
+      <Filter>Ressourcendateien\ScreenShots</Filter>
+    </ClCompile>
+    <ClCompile Include="run.cpp">
+      <Filter>Ressourcendateien\VdeoCapturer</Filter>
+    </ClCompile>
+    <ClCompile Include="save.cpp">
+      <Filter>Ressourcendateien\VdeoCapturer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Downloads\CreateAvi\AviFile.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="openSettingsMenu.cpp">
+      <Filter>Ressourcendateien\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="getTime.cpp">
+      <Filter>Ressourcendateien\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="getDesktopPath.cpp">
+      <Filter>Ressourcendateien\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dirExists.cpp">
+      <Filter>Ressourcendateien\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Ressourcendateien\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeSettings.cpp">
+      <Filter>Ressourcendateien\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Screenshots.cpp">
+      <Filter>Ressourcendateien\ScreenShots</Filter>
+    </ClCompile>
+    <ClCompile Include="openConsole.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="filterCommand.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="writeHelp.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="start.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="setupHotKeys.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="mainStructors.cpp">
+      <Filter>Ressourcendateien\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="writeDebug.cpp">
+      <Filter>Ressourcendateien\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoCapturer.cpp">
+      <Filter>Ressourcendateien\VdeoCapturer</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>Ressourcendateien\Logger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScreenShots.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoCapture.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="aviFile.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
