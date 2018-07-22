@@ -38,5 +38,6 @@ private:
 	void setupHotKeys();
 	bool filterCommand(string command);
 	void writeHelp();
+	void startCapturer();
 
 };

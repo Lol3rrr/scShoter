@@ -1,8 +1,6 @@
 #include "Logger.h"
 
-void Logger::writeError(string message) {
-
-	string time = utils.getTime();
+void Logger::writeError(string message, string time) {
 
 	string outputStr = "[Error] [" + time + "] " + message;
 

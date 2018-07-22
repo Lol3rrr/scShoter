@@ -48,9 +48,6 @@
     <ClCompile Include="save.cpp">
       <Filter>Ressourcendateien\VdeoCapturer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\CreateAvi\AviFile.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="openSettingsMenu.cpp">
       <Filter>Ressourcendateien\Settings</Filter>
     </ClCompile>
@@ -98,6 +95,18 @@
     </ClCompile>
     <ClCompile Include="logger.cpp">
       <Filter>Ressourcendateien\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="writeError.cpp">
+      <Filter>Ressourcendateien\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="writeNormal.cpp">
+      <Filter>Ressourcendateien\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="AviFile.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="getBitmap.cpp">
+      <Filter>Ressourcendateien\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

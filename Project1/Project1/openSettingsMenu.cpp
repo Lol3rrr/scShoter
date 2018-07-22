@@ -4,7 +4,7 @@ void clearConsole() {
 	cout << string(100, '\n');
 }
 
-bool Settings::openSettingsMenu(Utils* util) {
+bool Settings::openSettingsMenu() {
 
 	while (true) {
 
@@ -39,7 +39,7 @@ bool Settings::openSettingsMenu(Utils* util) {
 				string value = settingStr.substr(valueStart, settingStr.length() - valueStart);
 
 				//check if new savepath exists
-				if (util->DirExists(value)) {
+				if (utils->DirExists(value)) {
 					// get the ending of the new path
 					char ending = value.back();
 					// check if it ends on \ and add if not 

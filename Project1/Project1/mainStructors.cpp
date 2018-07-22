@@ -7,7 +7,7 @@ Main::Main()
 	string dataFolder = "scshoter";
 
 	settings = new Settings(dataFolder, utils);
-	logger = new Logger(dataFolder, settings);
+	logger = new Logger(dataFolder, settings->JsonSettings["debug"]);
 	utils = new Utils();
 	capturer = new VideoCapturer(logger);
 

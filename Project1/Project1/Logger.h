@@ -2,9 +2,7 @@
 
 #include <string>
 #include <fstream>
-
-#include "Utils.h"
-#include "Settings.h"
+#include <iostream>
 
 using namespace std;
 
@@ -15,13 +13,11 @@ public:
 	Logger(string dataFolder, bool debugMode);
 	~Logger();
 
-	void writeDebug(string message);
-	void writeError(string message);
-	void writeNormal(string message);
+	void writeDebug(string message, string time);
+	void writeError(string message, string time);
+	void writeNormal(string message, string time);
 
 private:
-
-	Utils utils;
 
 	bool debug;
 	ofstream output;

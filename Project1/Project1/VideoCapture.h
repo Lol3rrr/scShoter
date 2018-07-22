@@ -4,6 +4,7 @@
 #include <windows.h>
 
 #include "Logger.h"
+#include "Utils.h"
 
 using namespace std;
 
@@ -17,13 +18,14 @@ class VideoCapturer
 {
 public:
 
-	VideoCapturer(Logger* plogger);
+	VideoCapturer(Logger* pplogger);
 
-	static void run();
+	static void run(Logger* plogger, Utils* utils);
 	void save(string saveDir, string time);
 
 private:
 
+	Utils utils;
 	Logger * logger;
 
 };

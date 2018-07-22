@@ -1,44 +1,34 @@
 #include "ScreenShots.h"
 
 void ScreenShots::takeFocusedScreenshot(bool debug) {
+	logger->writeDebug("Starting Process to take a Screenshot of the focused Window", utils.getTime());
+
 	HWND windowHWnd = GetForegroundWindow(); // get the Handle for 
 
-	HDC Windhdc = GetWindowDC(windowHWnd); // get the device context of the Window
-	HDC hWind = CreateCompatibleDC(Windhdc); // create a device context to use yourself
+	logger->writeDebug("Successfully got the Handler for the Window", utils.getTime());
 
-	// get the height and width of the screen
-	RECT rect;
-	GetWindowRect(windowHWnd, &rect);
+	HBITMAP hbWindow = utils.getBitmap(windowHWnd, 0, logger);
 
-	// get width and height of window
-	int width = rect.right - rect.left;
-	int height = rect.bottom - rect.top;
-
-	// create a bitmap
-	HBITMAP hbWindow = CreateCompatibleBitmap(Windhdc, width, height);
-
-	// use the previously created device context with the bitmap
-	SelectObject(hWind, hbWindow);
-
-	// copy from the desktop device context to the bitmap device context
-	BitBlt(hWind, 0, 0, width, height, Windhdc, 0, 0, SRCCOPY);
-
-	// after the recording is done, release the desktop context you got..
-	ReleaseDC(windowHWnd, Windhdc);
-
-	// delete the context you created
-	DeleteDC(hWind);
+	logger->writeDebug("Successfully got the HBitmap for the Window", utils.getTime());
 
 	// attach the bitmap to the an image object
 	CImage Focusedimage;
 	Focusedimage.Attach(hbWindow);
 
+	logger->writeDebug("Successfully attached the HBitmap to the Image Objekt", utils.getTime());
+
 	// create string for File
 	string save = saveDir + "Window-" + utils.getTime() + ".png";
+
+	logger->writeDebug("Set the save Path for the Image to: " + save, utils.getTime());
 
 	// Save the Image
 	Focusedimage.Save(save.c_str());
 
+	logger->writeDebug("Successfully saved the Image to the File", utils.getTime());
+
 	// delete the bitmap object
 	DeleteObject(hbWindow);
+
+	logger->writeDebug("Successfully deleted the HBitmap Object", utils.getTime());
 }
