@@ -1,5 +1,9 @@
 #include "Main.h"
 
+void Main::startCapturer() {
+	capturer->run(logger, utils);
+}
+
 void Main::start() {
 
 	// starts a thread which listens for the hotkeys
@@ -7,7 +11,7 @@ void Main::start() {
 
 	if (settings->JsonSettings["screencapture"]) {
 		// start thread for the videocapturing
-		thread captureing(capturer->run);
+		thread captureing(&Main::startCapturer, this);
 	}
 
 	if (settings->JsonSettings["started"].is_null()) {
@@ -23,7 +27,7 @@ void Main::start() {
 	while (true) {
 		if (console) {
 			if (settingsMenu) {
-				settingsMenu = settings->openSettingsMenu(utils);
+				settingsMenu = settings->openSettingsMenu();
 			}
 			openConsole();
 		}

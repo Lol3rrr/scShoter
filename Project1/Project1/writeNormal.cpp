@@ -1,8 +1,6 @@
 #include "Logger.h"
 
-void Logger::writeNormal(string message) {
-
-	string time = utils.getTime();
+void Logger::writeNormal(string message, string time) {
 
 	string outputStr = "[" + time + "] " + message;
 

@@ -17,10 +17,10 @@ public:
 	
 	json JsonSettings;
 
-	Settings(string dataFolder, Utils* utils);
+	Settings(string dataFolder, Utils* util);
 
 	void safeSettings();
-	bool openSettingsMenu(Utils* util);
+	bool openSettingsMenu();
 
 private:
 

@@ -1,15 +1,17 @@
 #include "Settings.h"
 
-Settings::Settings(string dataFolder, Utils* tempUtils) {
-	utils = tempUtils;
+Settings::Settings(string dataFolder, Utils* util) {
+	utils = util;
 
 	char* appdata = nullptr;
 	size_t sz = 0;
 	_dupenv_s(&appdata, &sz, "APPDATA");
-
+	
 	// declare two strings with the save paths
 	appdataFolder = string(appdata) + "\\" + dataFolder + "\\";
 	settingsFile = appdataFolder + "settings.json";
+
+	
 
 	// get the size of the settingsfile
 	struct stat st;
@@ -31,7 +33,7 @@ Settings::Settings(string dataFolder, Utils* tempUtils) {
 
 	// create a buffer for the desktop path
 	char desktopPath[1024];
-	tempUtils->getDesktopPath(desktopPath); // set the buffer to the desktop path
+	util->getDesktopPath(desktopPath); // set the buffer to the desktop path
 
 									   // get the default save path directory
 	string defaultSavePath(desktopPath);

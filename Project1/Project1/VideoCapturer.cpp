@@ -1,7 +1,9 @@
 #include "VideoCapture.h"
 
-VideoCapturer::VideoCapturer(Logger* plogger) {
-	logger = plogger;
+VideoCapturer::VideoCapturer(Logger* pplogger) {
+	logger = pplogger;
+
+	logger->writeDebug("Initializing VideoCapturer...", utils.getTime());
 
 	wait = false;
 	framesPerSecond = 30;
@@ -9,4 +11,6 @@ VideoCapturer::VideoCapturer(Logger* plogger) {
 	framebuffersize = framesPerSecond * bufferSize;
 	vector<HBITMAP> temp(framesPerSecond * bufferSize, NULL);
 	frames = temp;
+
+	logger->writeDebug("Initialized VideoCapturer", utils.getTime());
 }
