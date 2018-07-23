@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scShoter-Backend", "scShoter Backend\scShoter Backend.vcxproj", "{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|ARM.ActiveCfg = Debug|x64
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|ARM.Build.0 = Debug|x64
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|x64.ActiveCfg = Debug|x64
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|x64.Build.0 = Debug|x64
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|x86.ActiveCfg = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Debug|x86.Build.0 = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|ARM.ActiveCfg = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|ARM.Build.0 = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|x64.ActiveCfg = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|x64.Build.0 = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|x86.ActiveCfg = Debug|ARM
+		{8FE70DDF-B990-4329-BBFC-A964D18F1BB6}.Release|x86.Build.0 = Debug|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20B1A3E9-DE42-470B-91A9-DD17E4023EE7}
+	EndGlobalSection
+EndGlobal
