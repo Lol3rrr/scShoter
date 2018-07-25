@@ -1,4 +1,5 @@
 #include "Main.h"
+#include "Networking.h"
 
 Main::Main()
 {
@@ -22,6 +23,14 @@ Main::Main()
 	}
 
 	screenshots = new ScreenShots(settings->JsonSettings["saveDir"], settings->JsonSettings["monitorCount"], logger);
+
+	Networking network;
+
+	cout << "Sending..." << endl;
+
+	network.sendFile("D:/Tests/Screenshoter/Desk-21-07-2018--13-39-54.png", "Desk-21-07-2018--13-39-54.png");
+	 
+	cout << "Send" << endl;
 }
 
 Main::~Main()

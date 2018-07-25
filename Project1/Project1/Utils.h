@@ -15,7 +15,8 @@ public:
 	void getDesktopPath(char* array);
 	string getTime();
 	bool DirExists(string path);
-	
+	long getFileSize(const char* path);
+
 	HBITMAP getBitmap(HWND window, int monitorCount, Logger* plogger);
 
 private:

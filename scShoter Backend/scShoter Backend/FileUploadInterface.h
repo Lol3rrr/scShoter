@@ -12,31 +12,25 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <thread>
 #include <fstream>
-
-#include "Logger.h"
-#include "FileUploadInterface.h"
 
 using namespace std;
 
-class Main
+class FileUploadInterface
 {
 public:
-	Main();
-	~Main();
+
+	FileUploadInterface(uint Serverport);
 
 	void start();
 
-	const int uploadPort = 23510;
-
 private:
 
-	void startSocket();
+	void createSocket(uint port);
+	void listening();
+	void processData();
 
-	
-	Logger* logger;
-	thread* socketThread;
-	FileUploadInterface* fileUploadInterface;
+	uint port;
+	int serverSocket;
 
 };

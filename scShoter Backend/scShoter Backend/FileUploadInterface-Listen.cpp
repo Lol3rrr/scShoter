@@ -1,32 +1,13 @@
-#include "Main.h"
+#include "FileUploadInterface.h"
 
-#define PORT 23510
-#define BACKLOG 5
+void FileUploadInterface::listening() {
 
-void Main::startSocket() {
-
-	int fd1, fd2;
-	int bnd, lstn;
+	int clientSocket;
 	char buffer[1024];
-	struct sockaddr_in server, client;
+	int lstn;
+	struct sockaddr_in client;
 
-	fd1 = socket(AF_INET, SOCK_STREAM, 0);
-	if (fd1<0) {
-		cout << "Error creating socket\n";
-	}
-	cout << "Socket created\n";
-
-	server.sin_family = AF_INET;
-	server.sin_port = htons(PORT);
-	server.sin_addr.s_addr = INADDR_ANY;
-
-
-	bnd = bind(fd1, (struct sockaddr *)&server, sizeof(server));
-	if (bnd<0) {
-		cout << "Error binding\n";
-	}
-
-	lstn = listen(fd1, BACKLOG);
+	lstn = listen(serverSocket, 5);
 	if (lstn<0) {
 		cout << "Error listening\n";
 	}
@@ -36,15 +17,15 @@ void Main::startSocket() {
 	socklen_t len = sizeof(client);
 
 	while (true) {
-		fd2 = accept(fd1, (struct sockaddr*)&client, &len);
-		if (fd2<0) {
+		clientSocket = accept(serverSocket, (struct sockaddr*)&client, &len);
+		if (clientSocket<0) {
 			cout << "Error accepting\n";
 		}
 
 		cout << "New Connection" << endl;
 
 		// Receive Data about file
-		recv(fd2, buffer, 1024, 0);
+		recv(clientSocket, buffer, 1024, 0);
 		string message(buffer);
 		int sizeIndex = message.find("size:");
 		int fileNameIndex = message.find("filename:");
@@ -77,7 +58,7 @@ void Main::startSocket() {
 			if (size < bufferSize)
 				toRead = size;
 
-			size = size - recv(fd2, recvBuffer, toRead, 0);
+			size = size - recv(clientSocket, recvBuffer, toRead, 0);
 			out.write(recvBuffer, toRead);
 		}
 
@@ -89,17 +70,14 @@ void Main::startSocket() {
 
 		string linkBuffer = "link:http://lol3r.net/uploads/" + fileName;
 		cout << "Link: " << linkBuffer << endl;
-		send(fd2, linkBuffer.c_str(), 1024, 0);
+		send(clientSocket, linkBuffer.c_str(), 1024, 0);
 
 		cout << "Link has been sent" << endl;
 
-		close(fd2);
-		shutdown(fd2, 0);
+		close(clientSocket);
+		shutdown(clientSocket, 0);
 
 		cout << "Closed Connection" << endl;
 	}
-
-	close(fd1);
-	shutdown(fd1, 0);
 
 }

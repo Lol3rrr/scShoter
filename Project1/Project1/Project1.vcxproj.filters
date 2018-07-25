@@ -31,6 +31,9 @@
     <Filter Include="Ressourcendateien\Logger">
       <UniqueIdentifier>{188672b4-41c5-4a5c-937e-0e353dbf4df8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ressourcendateien\Networking">
+      <UniqueIdentifier>{6f6ef5fa-b491-4e80-8612-04c01730bdd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -108,6 +111,15 @@
     <ClCompile Include="getBitmap.cpp">
       <Filter>Ressourcendateien\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="Networking-Struct.cpp">
+      <Filter>Ressourcendateien\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking-Send.cpp">
+      <Filter>Ressourcendateien\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="getFileSize.cpp">
+      <Filter>Ressourcendateien\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScreenShots.h">
@@ -132,6 +144,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

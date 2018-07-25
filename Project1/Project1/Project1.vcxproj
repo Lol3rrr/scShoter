@@ -129,10 +129,13 @@
     <ClCompile Include="filterCommand.cpp" />
     <ClCompile Include="getBitmap.cpp" />
     <ClCompile Include="getDesktopPath.cpp" />
+    <ClCompile Include="getFileSize.cpp" />
     <ClCompile Include="getTime.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainStructors.cpp" />
+    <ClCompile Include="Networking-Send.cpp" />
+    <ClCompile Include="Networking-Struct.cpp" />
     <ClCompile Include="openConsole.cpp" />
     <ClCompile Include="openSettingsMenu.cpp" />
     <ClCompile Include="run.cpp" />
@@ -155,6 +158,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Networking.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="ScreenShots.h" />
     <ClInclude Include="Utils.h" />
