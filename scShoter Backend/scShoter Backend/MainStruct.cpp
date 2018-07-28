@@ -3,7 +3,7 @@
 Main::Main() {
 
 	logger = new Logger("test.log", true);
-	fileUploadInterface = new FileUploadInterface(23510);
+	fileUploadInterface = new FileUploadInterface(23510, 20);
 
 }
 

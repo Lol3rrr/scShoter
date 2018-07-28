@@ -11,9 +11,6 @@ bool Main::filterCommand(string commandStr) {
 		settings->safeSettings();
 		exit(0);
 	}
-	else if (commandStr.find("desk-screenshot") != std::string::npos) {
-		screenshots->takeDesktopScreenshot(settings->JsonSettings["debug"]);
-	}
 	else if (commandStr.find("help") != std::string::npos) {
 		writeHelp();
 	}

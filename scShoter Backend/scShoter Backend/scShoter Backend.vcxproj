@@ -64,6 +64,7 @@
   <ItemGroup>
     <ClCompile Include="FileUploadInterface-createSocket.cpp" />
     <ClCompile Include="FileUploadInterface-Listen.cpp" />
+    <ClCompile Include="FileUploadInterface-processData.cpp" />
     <ClCompile Include="FileUploadInterface-start.cpp" />
     <ClCompile Include="FileUploadInterface-Struct.cpp" />
     <ClCompile Include="Logger-Struct.cpp" />

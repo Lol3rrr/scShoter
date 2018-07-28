@@ -29,6 +29,9 @@
     <ClCompile Include="FileUploadInterface-Struct.cpp">
       <Filter>Cpp Datein\FileUploadInterface</Filter>
     </ClCompile>
+    <ClCompile Include="FileUploadInterface-processData.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

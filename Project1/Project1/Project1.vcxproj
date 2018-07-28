@@ -134,13 +134,14 @@
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainStructors.cpp" />
-    <ClCompile Include="Networking-Send.cpp" />
+    <ClCompile Include="Networking-SendFile.cpp" />
     <ClCompile Include="Networking-Struct.cpp" />
     <ClCompile Include="openConsole.cpp" />
     <ClCompile Include="openSettingsMenu.cpp" />
     <ClCompile Include="run.cpp" />
     <ClCompile Include="SafeSettings.cpp" />
     <ClCompile Include="save.cpp" />
+    <ClCompile Include="ScreenShots-saveImage.cpp" />
     <ClCompile Include="Screenshots.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="setupHotKeys.cpp" />

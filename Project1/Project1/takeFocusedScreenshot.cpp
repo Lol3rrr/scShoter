@@ -1,6 +1,6 @@
 #include "ScreenShots.h"
 
-void ScreenShots::takeFocusedScreenshot(bool debug) {
+void ScreenShots::takeFocusedScreenshot() {
 	logger->writeDebug("Starting Process to take a Screenshot of the focused Window", utils.getTime());
 
 	HWND windowHWnd = GetForegroundWindow(); // get the Handle for 
@@ -17,15 +17,10 @@ void ScreenShots::takeFocusedScreenshot(bool debug) {
 
 	logger->writeDebug("Successfully attached the HBitmap to the Image Objekt", utils.getTime());
 
-	// create string for File
-	string save = saveDir + "Window-" + utils.getTime() + ".png";
+	// saving the Image
+	string saveName = "Window-" + utils.getTime() + ".png";
 
-	logger->writeDebug("Set the save Path for the Image to: " + save, utils.getTime());
-
-	// Save the Image
-	Focusedimage.Save(save.c_str());
-
-	logger->writeDebug("Successfully saved the Image to the File", utils.getTime());
+	saveImage(saveName, &Focusedimage);
 
 	// delete the bitmap object
 	DeleteObject(hbWindow);

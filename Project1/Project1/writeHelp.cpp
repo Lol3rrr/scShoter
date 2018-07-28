@@ -8,6 +8,5 @@ void Main::writeHelp() {
 	cout << "Commands:" << endl;
 	cout << " - exit : Closes the Console Window but the Program will still be running in the Background" << endl;
 	cout << " - stop : Shuts the Programm down" << endl;
-	cout << " - desk-screenshot : Take a screenshot of the current Desktop" << endl;
-	cout << " - setting : Enter the Settings Menu" << endl;
+	cout << " - settings : Enter the Settings Menu" << endl;
 }

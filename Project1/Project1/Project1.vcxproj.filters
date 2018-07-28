@@ -114,11 +114,14 @@
     <ClCompile Include="Networking-Struct.cpp">
       <Filter>Ressourcendateien\Networking</Filter>
     </ClCompile>
-    <ClCompile Include="Networking-Send.cpp">
-      <Filter>Ressourcendateien\Networking</Filter>
-    </ClCompile>
     <ClCompile Include="getFileSize.cpp">
       <Filter>Ressourcendateien\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking-SendFile.cpp">
+      <Filter>Ressourcendateien\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShots-saveImage.cpp">
+      <Filter>Ressourcendateien\ScreenShots</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

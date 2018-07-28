@@ -13,14 +13,17 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <fstream>
+#include <thread>
+#include <vector>
+#include <cstdlib>
 
 using namespace std;
 
 class FileUploadInterface
 {
 public:
-
-	FileUploadInterface(uint Serverport);
+	FileUploadInterface(uint Serverport, int maxAmountConnections);
+	~FileUploadInterface();
 
 	void start();
 
@@ -28,9 +31,14 @@ private:
 
 	void createSocket(uint port);
 	void listening();
-	void processData();
+	void processData(int clientSocket);
 
 	uint port;
 	int serverSocket;
+
+	int maxConnections = 10;
+	int connections = 0;
+
+	vector<thread> threads;
 
 };

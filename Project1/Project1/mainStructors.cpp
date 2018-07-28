@@ -1,5 +1,4 @@
 #include "Main.h"
-#include "Networking.h"
 
 Main::Main()
 {
@@ -11,7 +10,7 @@ Main::Main()
 	logger = new Logger(dataFolder, settings->JsonSettings["debug"]);
 	utils = new Utils();
 	capturer = new VideoCapturer(logger);
-
+	networking = new Networking(logger, settings->JsonSettings["bufferSize"]);
 
 	if (settings->JsonSettings["monitorCount"] == NULL) {
 		int monitorCount = 1;
@@ -22,15 +21,7 @@ Main::Main()
 		settings->JsonSettings["monitorCount"] = monitorCount;
 	}
 
-	screenshots = new ScreenShots(settings->JsonSettings["saveDir"], settings->JsonSettings["monitorCount"], logger);
-
-	Networking network;
-
-	cout << "Sending..." << endl;
-
-	network.sendFile("D:/Tests/Screenshoter/Desk-21-07-2018--13-39-54.png", "Desk-21-07-2018--13-39-54.png");
-	 
-	cout << "Send" << endl;
+	screenshots = new ScreenShots(settings->JsonSettings["saveDir"], settings->JsonSettings["monitorCount"], settings->JsonSettings["saveImage"], settings->JsonSettings["upload"], networking, logger);
 }
 
 Main::~Main()

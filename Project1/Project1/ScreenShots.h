@@ -6,6 +6,7 @@
 
 #include "Utils.h"
 #include "Logger.h"
+#include "Networking.h"
 
 using namespace std;
 
@@ -13,17 +14,22 @@ class ScreenShots
 {
 public:
 
-	ScreenShots(string savePath, int monitorAmount, Logger* plogger);
+	ScreenShots(string savePath, int monitorAmount, bool saveImage, bool uploadImage, Networking* pnetworking, Logger* plogger);
 
-	void takeDesktopScreenshot(bool debug);
-	void takeFocusedScreenshot(bool debug);
+	void takeDesktopScreenshot();
+	void takeFocusedScreenshot();
 
 private:
 
+	void saveImage(string saveName, CImage* image);
+
 	Utils utils;
+	Networking* networking;
 	Logger* logger;
 
 	string saveDir;
 	int monitorCount;
+	bool save;
+	bool upload;
 
 };

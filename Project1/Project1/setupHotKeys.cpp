@@ -33,10 +33,10 @@ void Main::setupHotKeys() {
 				switch (msg.wParam)
 				{
 				case 1:
-					screenshots->takeDesktopScreenshot(settings->JsonSettings["debug"]);
+					screenshots->takeDesktopScreenshot();
 					break;
 				case 2:
-					screenshots->takeFocusedScreenshot(settings->JsonSettings["debug"]);
+					screenshots->takeFocusedScreenshot();
 					break;
 				case 3:
 					capturer->save(settings->JsonSettings["saveDir"], utils->getTime());
