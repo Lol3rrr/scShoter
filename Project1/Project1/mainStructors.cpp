@@ -10,7 +10,7 @@ Main::Main()
 	logger = new Logger(dataFolder, settings->JsonSettings["debug"]);
 	utils = new Utils();
 	capturer = new VideoCapturer(logger);
-
+	networking = new Networking(logger, settings->JsonSettings["bufferSize"]);
 
 	if (settings->JsonSettings["monitorCount"] == NULL) {
 		int monitorCount = 1;
@@ -21,7 +21,7 @@ Main::Main()
 		settings->JsonSettings["monitorCount"] = monitorCount;
 	}
 
-	screenshots = new ScreenShots(settings->JsonSettings["saveDir"], settings->JsonSettings["monitorCount"], logger);
+	screenshots = new ScreenShots(settings->JsonSettings["saveDir"], settings->JsonSettings["monitorCount"], settings->JsonSettings["saveImage"], settings->JsonSettings["upload"], networking, logger);
 }
 
 Main::~Main()

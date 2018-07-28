@@ -25,8 +25,12 @@ public:
 private:
 
 	int default_monitorCount;
+	int default_bufferSize;
 	bool default_debug;
 	bool default_screencapture;
+	bool default_upload;
+	bool default_saveImage;
+	bool default_minimize;
 	string default_saveDir;
 	string settingsFile;
 	string appdataFolder;

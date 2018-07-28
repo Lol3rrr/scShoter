@@ -10,6 +10,7 @@
 #include "Settings.h"
 #include "VideoCapture.h"
 #include "Logger.h"
+#include "Networking.h"
 
 using namespace std;
 
@@ -29,6 +30,7 @@ public:
 	Settings* settings;
 	Logger* logger;
 	Utils* utils;
+	Networking* networking;
 	VideoCapturer* capturer;
 	atomic<bool> console;
 	atomic<bool> settingsMenu;

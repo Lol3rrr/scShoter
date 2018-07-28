@@ -17,6 +17,21 @@
     <ClCompile Include="Logger-writeDebug.cpp">
       <Filter>Cpp Datein\Logger</Filter>
     </ClCompile>
+    <ClCompile Include="FileUploadInterface-start.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUploadInterface-createSocket.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUploadInterface-Listen.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUploadInterface-Struct.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUploadInterface-processData.cpp">
+      <Filter>Cpp Datein\FileUploadInterface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -31,12 +46,18 @@
     <Filter Include="Cpp Datein\Logger">
       <UniqueIdentifier>{417bada8-d00f-4cd7-bea5-2499b71e7910}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Cpp Datein\FileUploadInterface">
+      <UniqueIdentifier>{6831e49b-6d8f-48c7-b642-0dd7f71b837d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUploadInterface.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

@@ -129,15 +129,19 @@
     <ClCompile Include="filterCommand.cpp" />
     <ClCompile Include="getBitmap.cpp" />
     <ClCompile Include="getDesktopPath.cpp" />
+    <ClCompile Include="getFileSize.cpp" />
     <ClCompile Include="getTime.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainStructors.cpp" />
+    <ClCompile Include="Networking-SendFile.cpp" />
+    <ClCompile Include="Networking-Struct.cpp" />
     <ClCompile Include="openConsole.cpp" />
     <ClCompile Include="openSettingsMenu.cpp" />
     <ClCompile Include="run.cpp" />
     <ClCompile Include="SafeSettings.cpp" />
     <ClCompile Include="save.cpp" />
+    <ClCompile Include="ScreenShots-saveImage.cpp" />
     <ClCompile Include="Screenshots.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="setupHotKeys.cpp" />
@@ -155,6 +159,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Networking.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="ScreenShots.h" />
     <ClInclude Include="Utils.h" />

@@ -1,6 +1,6 @@
 #include "ScreenShots.h"
 
-void ScreenShots::takeDesktopScreenshot(bool debug) {
+void ScreenShots::takeDesktopScreenshot() {
 	
 	logger->writeDebug("Started Process to take a Screenshot of the Desktop", utils.getTime());
 
@@ -14,15 +14,10 @@ void ScreenShots::takeDesktopScreenshot(bool debug) {
 
 	logger->writeDebug("Successfully attached the HBitmap to an Image Object", utils.getTime());
 
-	// create the string for the savefile
-	string save = saveDir + "Desk-" + utils.getTime() + ".png";
-	
-	logger->writeDebug("Set the save Path for the Image to: " + save, utils.getTime());
+	// saving the Image
+	string saveName = "Desk-" + utils.getTime() + ".png";
 
-	// save image
-	Deskimage.Save(save.c_str());
-
-	logger->writeDebug("Successfully saved the Image Object", utils.getTime());
+	saveImage(saveName, &Deskimage);
 
 	// delete the bitmap object
 	DeleteObject(hbDesktop);

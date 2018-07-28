@@ -19,9 +19,12 @@ void Main::start() {
 		writeHelp();
 		console = true;
 	}
-	else {
+	else if(settings->JsonSettings["minimize"]){
 		// hides the console window
 		ShowWindow(GetConsoleWindow(), SW_HIDE);
+	}
+	else {
+		console = true;
 	}
 
 	while (true) {

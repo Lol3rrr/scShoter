@@ -9,9 +9,5 @@ int main()
 
 	mainObj.start();
 
-	while (true) {
-
-	}
-
     return 0;
 }

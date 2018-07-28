@@ -41,8 +41,12 @@ Settings::Settings(string dataFolder, Utils* util) {
 	// sets the default monitor count
 	default_saveDir = defaultSavePath + "\\";
 	default_monitorCount = 1;
+	default_bufferSize = 256;
 	default_debug = false;
 	default_screencapture = false;
+	default_upload = false;
+	default_saveImage = true;
+	default_minimize = false;
 
 	// check if the imagedir was loaded
 	if (JsonSettings["saveDir"].is_null()) {
@@ -60,5 +64,21 @@ Settings::Settings(string dataFolder, Utils* util) {
 	if (JsonSettings["screencapture"].is_null()) {
 		// set the debug mode to the default value
 		JsonSettings["screencapture"] = default_screencapture;
+	}
+	if (JsonSettings["upload"].is_null()) {
+		// set the debug mode to the default value
+		JsonSettings["upload"] = default_upload;
+	}
+	if (JsonSettings["saveImage"].is_null()) {
+		// set the debug mode to the default value
+		JsonSettings["saveImage"] = default_saveImage;
+	}
+	if (JsonSettings["minimize"].is_null()) {
+		// set the debug mode to the default value
+		JsonSettings["minimize"] = default_minimize;
+	}
+	if (JsonSettings["bufferSize"].is_null()) {
+		// set the debug mode to the default value
+		JsonSettings["bufferSize"] = default_bufferSize;
 	}
 }
